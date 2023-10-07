@@ -1,0 +1,29 @@
+.custom-background {
+  background-color: #9A616D;
+}
+
+
+.custom-card {
+  border-radius: 1rem;
+}
+
+.custom-image {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.custom-icon {
+  color: #ff6219;
+}
+
+.custom-heading {
+  letter-spacing: 1px;
+}
+
+.custom-button {
+  background-color: #393f81;
+  color: #fff;
+}
+
+.custom-link {
+  color: #393f81;
+}
