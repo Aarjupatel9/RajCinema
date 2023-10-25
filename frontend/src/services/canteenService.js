@@ -142,6 +142,7 @@ class UserService {
                 });
         });
     }
+
     transferSelectedProductToCanteen(canteenId, products) {
         return new Promise(function (resolve, reject) {
             const options = {
@@ -179,7 +180,7 @@ class UserService {
 
     //canteen specific
 
-    getAllProducts(canteenId) {
+    getAllCanteenProducts(canteenId) {
         return new Promise(function (resolve, reject) {
             const options = {
                 method: "POST",

@@ -14,7 +14,7 @@ import {
   Col,
 } from "reactstrap";
 
-function Tables() {
+function EditProduct() {
 
 
   const [products, setProducts] = useState([]);
@@ -22,16 +22,16 @@ function Tables() {
   const navigate = useNavigate();
   useEffect(() => {
 
-    const productPromise = userService.getAllProducts();
+    // const productPromise = userService.getAllProducts();
 
-    productPromise.then((res) => {
-      console.log("products response : ", res);
-      if (res.products) {
-        setProducts(res.products);
-      }
-    }).catch((err) => {
-      console.log("error : ", err);
-    })
+    // productPromise.then((res) => {
+    //   console.log("products response : ", res);
+    //   if (res.products) {
+    //     setProducts(res.products);
+    //   }
+    // }).catch((err) => {
+    //   console.log("error : ", err);
+    // })
 
 
   }, [])
@@ -151,4 +151,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default EditProduct;

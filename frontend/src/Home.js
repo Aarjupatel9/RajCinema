@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import { selectSystemVariables } from "reduxStore/reducers/systemVariables";
-import { selectUserDetails } from "reduxStore/reducers/userDetailSlice";
 import { useAppDispatch, useAppSelector } from "reduxStore/hooks";
+
+import { setUserDetail } from "./reduxStore/reducers/userDetailSlice";
+import { selectSystemVariables } from "./reduxStore/reducers/systemVariables";
+import { selectUserDetails } from "./reduxStore/reducers/userDetailSlice";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.3.0";
 import "assets/demo/demo.css";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
 import "./css/Form.css";
-import AdminLayout from "layouts/AdminLayout.js";
-import CanteenLayout from "layouts/CanteenLayout.js";
-import Login from "views/Login";
-import authService from "services/auth.service";
-import { setUserDetail } from "reduxStore/reducers/userDetailSlice";
+import AdminLayout from "./layouts/AdminLayout.js";
+import CanteenLayout from "./layouts/CanteenLayout.js";
+import Login from "./views/commonPages/Login";
+import authService from "./services/authService";
 
 function Home() {
   const SystemVariables = useAppSelector(selectSystemVariables);

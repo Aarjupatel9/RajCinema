@@ -35,24 +35,21 @@ function Sidebar(props) {
       data-active-color={props.activeColor}
     >
       <div className="logo">
-        <a
-          href="https://www.rajCinema.com"
-          className="simple-text logo-mini"
-        >
+        <a href="https://www.rajCinema.com" className="simple-text logo-mini">
           <div className="logo-img">
             <img src={logo} alt="react-logo" />
           </div>
         </a>
-        <a
-          href="https://www.rajCinema.com"
-          className="simple-text logo-normal"
-        >
-         Raj Cinema
+        <a href="https://www.rajCinema.com" className="simple-text logo-normal">
+          Raj Cinema
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
         <Nav>
           {props.routes.map((prop, key) => {
+            if (prop.onlyRoute) {
+              return <></>;
+            }
             return (
               <li
                 className={

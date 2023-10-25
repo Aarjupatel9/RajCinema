@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from "reduxStore/hooks";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { userLoginValidator } from "validators/authValidator";
-import authService from "../services/auth.service";
+import authService from "../../services/authService";
 
 import "css/Login.css";
 
